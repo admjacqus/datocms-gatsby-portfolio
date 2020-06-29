@@ -105,6 +105,7 @@ const TemplateWrapper = ({ children }) => {
             {children}
           </div>
         </div>
+ 
       )}
     />
   );
