@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
-import "../styles/index.sass";
+import "../styles/index.scss";
 
 const TemplateWrapper = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -49,11 +49,11 @@ const TemplateWrapper = ({ children }) => {
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
           />
-          <div className="container__sidebar">
+          <div className="container__section">
+            <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
+          </div>
+          <div className="container__section container__sidebar">
             <div className="sidebar">
-              <h6 className="sidebar__title">
-                <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-              </h6>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
@@ -61,31 +61,14 @@ const TemplateWrapper = ({ children }) => {
                     data.datoCmsHome.introTextNode.childMarkdownRemark.html
                 }}
               />
-              <ul className="sidebar__menu">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/about">About</Link>
-                </li>
-              </ul>
-              <p className="sidebar__social">
-                {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
-                  <a
-                    key={profile.profileType}
-                    href={profile.url}
-                    target="blank"
-                    className={`social social--${profile.profileType.toLowerCase()}`}
-                  >
-                    {" "}
-                  </a>
-                ))}
-              </p>
+
+
               <div className="sidebar__copyright">
                 {data.datoCmsHome.copyright}
               </div>
             </div>
           </div>
+
           <div className="container__body">
             <div className="container__mobile-header">
               <div className="mobile-header">
