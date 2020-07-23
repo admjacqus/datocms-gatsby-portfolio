@@ -7,6 +7,7 @@ import Landing from "../components/landing"
 
 const IndexPage = ({ data }) => (
   <Layout>
+       <div class="flexContainer">
     <Landing></Landing>
     <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
@@ -27,6 +28,7 @@ const IndexPage = ({ data }) => (
         </div>
       ))}
     </Masonry>
+    </div>
   </Layout>
 )
 

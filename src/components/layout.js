@@ -66,9 +66,9 @@ const TemplateWrapper = ({ children }) => {
                 </div>
               </div>
             </div>
-            <div class="flexContainer">
+         
             {children}
-            </div>
+          
           </div>
         </div>
  
