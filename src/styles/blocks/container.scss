@@ -3,49 +3,14 @@ body {
     color: $dark-font-color;
 }
 
-.landing_about {
-    background-color: $light-bg-color;
-    color: $light-font-color;
+//hide mobile header for now
+.container__mobile-header {
+    display: none;
 }
 
-// .flexContainer {
-//     height: 100%;
-//     display: flex;
-//     overflow-x: auto;
-//     flex-flow: column nowrap;
-//     scroll-snap-type: y proximity;
+// @media screen and (max-width: 899px) {
+
 // }
-
-@media screen and (max-width: 899px) {
-    .container__sidebar {
-        // box-sizing: border-box;
-        // width: 200px;
-        // height: 100%;
-        // position: fixed;
-        // top: 0;
-        // right: 0;
-        // bottom: 0;
-        // left: 0;
-        // z-index: 2;
-        // transform: translate3d(-200px, 0, 0);
-        // transition: transform 0.2s ease-in-out;
-        // padding: 20px;
-        // background-color: $light-bg-color;
-
-        .container.is-open & {
-            transform: translate3d(0px, 0, 0);
-        }
-    }
-
-    .container__body {
-        transform: translate3d(0px, 0, 0);
-        transition: transform 0.2s ease-in-out;
-
-        .container.is-open & {
-            transform: translate3d(200px, 0, 0);
-        }
-    }
-}
 
 @media screen and (min-width: 900px) {
     .flexContainer {
@@ -62,39 +27,5 @@ body {
         > * {
             flex-shrink: 0 !important;
         }
-
-        .showcase {
-            flex: 100vw 1 0;
-            height: 100vh !important;
-            overflow-y: scroll;
-        }
     }
-
-    .landing {
-        flex: 140vw 1 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-
-        > div {
-            min-height: 100vh;
-            padding: 3em;
-        }
-    }
-
-    .landing_hi {
-        flex: 90vw;
-    }
-
-    .landing_about {
-        flex: 60vw;
-    }
-
-    .container__mobile-header {
-        display: none;
-    }
-
-    // .container__body--white {
-    //     background-color: white;
-    // }
 }

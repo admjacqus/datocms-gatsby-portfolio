@@ -26,7 +26,7 @@ const TemplateWrapper = () => {
                 <div className="landing_hi">
                         <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
 
-                    <div className="sidebar__copyright">
+                    <div className="landing__copyright">
                         {data.datoCmsHome.copyright}
                     </div>
                     </div>
