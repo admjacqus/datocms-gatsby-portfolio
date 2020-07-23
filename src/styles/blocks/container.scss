@@ -1,3 +1,13 @@
+body {
+    background-color: $dark-bg-color;
+    color: $dark-font-color;
+}
+
+.landing_about {
+    background-color: $light-bg-color;
+    color: $light-font-color;
+}
+
 // .flexContainer {
 //     height: 100%;
 //     display: flex;
@@ -57,7 +67,6 @@
             flex: 100vw 1 0;
             height: 100vh !important;
             overflow-y: scroll;
-            background: #29634f;
         }
     }
 
@@ -71,9 +80,6 @@
             min-height: 100vh;
             padding: 3em;
         }
-
-        color: #c1e9ee;
-        background: #29634f;
     }
 
     .landing_hi {
@@ -82,8 +88,6 @@
 
     .landing_about {
         flex: 60vw;
-        background: #fadfe5;
-        color: #ed4850;
     }
 
     .container__mobile-header {
