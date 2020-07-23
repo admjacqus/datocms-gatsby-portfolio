@@ -1,0 +1,44 @@
+.landing {
+    // align-items: center;
+    // justify-content: space-around;
+
+    > div {
+        padding: 3em;
+    }
+}
+
+.landing__copyright {
+    color: $dark-font-color;
+    font-size: 13px;
+}
+
+.landing_about {
+    background-color: $light-bg-color;
+    color: $light-font-color;
+}
+
+@media screen and (min-width: 900px) {
+
+        .showcase {
+            flex: 100vw 1 0;
+            height: 100vh !important;
+            overflow-y: scroll;
+        }
+    
+
+    .landing {
+        flex: 140vw 1 0;
+        display: flex;
+        > div {
+            padding: 3em;
+        }
+    }
+
+    .landing_hi {
+        flex: 90vw;
+    }
+
+    .landing_about {
+        flex: 60vw;
+    }
+}
