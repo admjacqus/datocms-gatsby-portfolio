@@ -49,25 +49,6 @@ const TemplateWrapper = ({ children }) => {
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
           />
-          <div className="container__section">
-            <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
-          </div>
-          <div className="container__section container__sidebar">
-            <div className="sidebar">
-              <div
-                className="sidebar__intro"
-                dangerouslySetInnerHTML={{
-                  __html:
-                    data.datoCmsHome.introTextNode.childMarkdownRemark.html
-                }}
-              />
-
-
-              <div className="sidebar__copyright">
-                {data.datoCmsHome.copyright}
-              </div>
-            </div>
-          </div>
 
           <div className="container__body">
             <div className="container__mobile-header">
@@ -85,7 +66,9 @@ const TemplateWrapper = ({ children }) => {
                 </div>
               </div>
             </div>
+            <div class="flexContainer">
             {children}
+            </div>
           </div>
         </div>
  
