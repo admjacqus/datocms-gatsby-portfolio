@@ -3,6 +3,10 @@ body {
     color: $dark-font-color;
 }
 
+body, .contanier, .conatiner__body {
+    max-width: 100%;
+}
+
 //hide mobile header for now
 .container__mobile-header {
     display: none;
@@ -20,11 +24,12 @@ body {
         height: 100vh;
         display: flex;
         flex-flow: row nowrap;
-        scroll-snap-type: x proximity;
+        scroll-snap-type: x mandatory;
         overflow-x: auto;
         overflow-y: hidden;
 
         > * {
+            scroll-snap-align: start;
             flex-shrink: 0 !important;
         }
     }
