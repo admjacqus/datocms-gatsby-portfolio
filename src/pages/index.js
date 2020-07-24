@@ -2,14 +2,16 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
+import Splash from "../components/splash"
 import Layout from "../components/layout"
 import Landing from "../components/landing"
 
 const IndexPage = ({ data }) => (
   <Layout>
        <div class="flexContainer">
+         <Splash></Splash>
     <Landing></Landing>
-    <Masonry className="showcase">
+    <Masonry className="showcase scrollable">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">

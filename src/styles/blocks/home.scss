@@ -1,0 +1,37 @@
+.landing {
+    background-color: $light-bg-color;
+    color: $light-font-color;
+
+    > div {
+        padding: 3em;
+    }
+}
+
+.splash__copyright {
+    color: $dark-font-color;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 900px) {
+    .splash, .landing {
+        padding: 3em 0 1em 3em;
+    }
+
+    .splash {
+        flex: 90vw 0 0;
+        display: flex;
+    }
+
+    .landing {
+        flex: 60vw 0 0;
+    }
+
+    .showcase {
+        flex: 100vw;
+    }
+
+    .scrollable {
+        height: 100vh !important;
+        overflow-y: scroll;
+    }
+}
