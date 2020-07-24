@@ -18,15 +18,13 @@ const TemplateWrapper = () => {
             render={data => (
                 <div className="splash">
 
-                <div className="splash__content">
                         <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
 
                     <div className="splash__copyright">
                         {data.datoCmsHome.copyright}
                     </div>
                     </div>
-                
-                </div>
+
             )}
         />
     );
