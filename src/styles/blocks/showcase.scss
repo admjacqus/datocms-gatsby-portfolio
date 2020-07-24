@@ -4,6 +4,7 @@
 
 .showcase__item {
   margin-bottom: 30px;
+  // flex-shrink: 1;
 }
 
 @media screen and (max-width: 400px) {
@@ -25,16 +26,21 @@
   }
 }
 
+@media screen and (min-width: 900px) {
+  .showcase__item {
+    width: (98% / 3);
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .showcase__item {
-    width: (100% / 4);
+    width: (98% / 4);
   }
 }
 
 @media screen and (min-width: 900px) {
   .showcase {
     padding: 40px 0 10px;
-    margin-right: 40px;
   }
 }
 
