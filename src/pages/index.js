@@ -8,7 +8,7 @@ import Landing from "../components/landing"
 
 const IndexPage = ({ data }) => (
   <Layout>
-       <div class="flexContainer">
+       <div className="flexContainer">
          <Splash></Splash>
     <Landing></Landing>
     <Masonry className="showcase scrollable">
