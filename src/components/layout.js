@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/
 
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
@@ -9,7 +9,6 @@ import { HelmetDatoCms } from "gatsby-source-datocms";
 import "../styles/index.scss";
 
 const TemplateWrapper = ({ children }) => {
-  const [showMenu, setShowMenu] = useState(false);
   return (
     <StaticQuery
       query={graphql`
@@ -44,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
         }
       `}
       render={data => (
-        <div className={`container ${showMenu ? "is-open" : ""}`}>
+        <div className="container">
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
             seo={data.datoCmsHome.seoMetaTags}
@@ -54,12 +53,6 @@ const TemplateWrapper = ({ children }) => {
             <div className="container__mobile-header">
               <div className="mobile-header">
                 <div className="mobile-header__menu">
-                  <button
-                    onClick={e => {
-                      e.preventDefault();
-                      setShowMenu(!showMenu);
-                    }}
-                  />
                 </div>
                 <div className="mobile-header__logo">
                   <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
