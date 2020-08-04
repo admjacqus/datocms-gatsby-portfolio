@@ -39,13 +39,16 @@
 
 @media screen and (min-width: 900px) {
     .splash {
-        flex: 90vw 0 0;
+        flex: 75vw 0 0;
         display: flex;
     }
 
     .landing {
-        flex: 60vw 0 0;
+        flex: 75vw 0 0;
         justify-content: flex-start;
+        .landing__content{
+            width: 90%;
+        }
     }
 
     .showcase {
