@@ -16,6 +16,15 @@ export default ({ data }) => (
       <div className="sheet__inner">
         <h1 className="sheet__title">{data.datoCmsWork.title}</h1>
         <p className="sheet__lead">{data.datoCmsWork.excerpt}</p>
+        <div className="sheet__gallery">
+          <Img fluid={data.datoCmsWork.coverImage.fluid} />
+        </div>
+        <div
+          className="sheet__body"
+          dangerouslySetInnerHTML={{
+            __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
+          }}
+        />
         <div className="sheet__slider">
           <Slider infinite={true} slidesToShow={2} arrows>
             {data.datoCmsWork.gallery.map(({ fluid }) => (
@@ -27,22 +36,20 @@ export default ({ data }) => (
             ))}
           </Slider>
         </div>
-        <div
-          className="sheet__body"
-          dangerouslySetInnerHTML={{
-            __html: data.datoCmsWork.descriptionNode.childMarkdownRemark.html,
-          }}
-        />
-        <div className="sheet__gallery">
-          <Video
-            videoSrcURL={'https://player.vimeo.com/video/' + data.datoCmsWork.video.providerUid}
-            videoTitle={data.datoCmsWork.video.title}
-            videoWidth={data.datoCmsWork.video.width}
-            videoHeight={data.datoCmsWork.video.height}
-
-          />
-          <Img fluid={data.datoCmsWork.coverImage.fluid} />
-        </div>
+        {
+          data.datoCmsWork.video !== null &&
+          <div className="sheet__video">
+            <Video
+              videoSrcURL={
+                "https://player.vimeo.com/video/" +
+                data.datoCmsWork.video.providerUid
+              }
+              videoTitle={data.datoCmsWork.video.title}
+              videoWidth={data.datoCmsWork.video.width}
+              videoHeight={data.datoCmsWork.video.height}
+            />
+          </div>
+        }
       </div>
     </article>
   </Layout>
