@@ -11,9 +11,12 @@ import Arrow from '../components/arrow'
 export default ({ data }) => (
   <Layout>
     <article className="sheet">
-      <Link to="/">
+      <div className="backArrow">
+              <Link to="/">
         <Arrow></Arrow>
       </Link>
+      </div>
+
 
       <HelmetDatoCms seo={data.datoCmsWork.seoMetaTags} />
       <div className="sheet__inner">
