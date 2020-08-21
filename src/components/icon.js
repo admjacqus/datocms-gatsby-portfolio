@@ -1,6 +1,6 @@
 import React from 'react'
 import { RandomBlob } from 'react-random-shapes'
-const Blob = () => (
+const Icon = () => (
   <React.Fragment>
     <RandomBlob
       className={'blob'}
@@ -11,4 +11,4 @@ const Blob = () => (
     />
   </React.Fragment>
 )
-export default Blob
+export default Icon
