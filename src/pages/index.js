@@ -8,10 +8,10 @@ import Landing from "../components/landing"
 
 const IndexPage = ({ data }) => (
   <Layout>
-       <div className="flexContainer">
-         <Splash></Splash>
+    <div className="scrollSnap">
+    <Splash></Splash>
     <Landing></Landing>
-    <Masonry className="showcase scrollable">
+    <Masonry className="showcase">
       {data.allDatoCmsWork.edges.map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
           <figure className="card">
@@ -28,9 +28,10 @@ const IndexPage = ({ data }) => (
             </figcaption>
           </figure>
         </div>
+   
       ))}
     </Masonry>
-    </div>
+         </div>
   </Layout>
 )
 

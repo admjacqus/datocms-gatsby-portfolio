@@ -9,7 +9,6 @@ const TemplateWrapper = () => {
         <StaticQuery
             query={graphql`
        query SplashQuery {
-
           datoCmsHome {
         copyright
           }
@@ -17,14 +16,11 @@ const TemplateWrapper = () => {
       `}
             render={data => (
                 <div className="splash">
-
                         <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
-
                     <div className="splash__copyright">
                         {data.datoCmsHome.copyright}
                     </div>
                     </div>
-
             )}
         />
     );

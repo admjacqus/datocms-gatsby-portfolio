@@ -3,40 +3,10 @@ body {
     color: $dark-font-color;
 }
 
-.container {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.flexContainer {
-    > *:not(.showcase) {
-        padding: 1em;
-        @media screen and (min-width: 375px) {
-            padding: 1em 2em;
-        }
-    }
-}
 
 //hide mobile header for now
 .container__mobile-header {
     display: none;
 }
 
-@media screen and (min-width: 900px) {
-    .flexContainer {
-        padding: 0;
-        flex: none;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-flow: row nowrap;
-        scroll-snap-type: x mandatory;
-        overflow-x: auto;
-        overflow-y: hidden;
 
-        > * {
-            scroll-snap-align: start;
-            flex-shrink: 0 !important;
-        }
-    }
-}

@@ -1,9 +1,19 @@
+.scrollSnap {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    > * {
+        scroll-snap-align: start;
+    }
+}
+
 .splash {
-    min-height: 50vh;
+    min-height: 100vh;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 1em
 }
 
 .splash__copyright {
@@ -14,49 +24,22 @@
 .landing {
     background-color: $light-bg-color;
     color: $light-font-color;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .landing__content {
-    padding: 3em 0;
-
+    padding: 1em;
+    align-self: center;
     p {
         margin-bottom: 1em;
     }
 }
 
 @media screen and (max-width: 899px) {
-    .splash__copyright {
-        display: none;
-    }
-
     .showcase {
-        padding-top: 30px;
+        padding-top: 2em
     }
 }
 
 @media screen and (min-width: 900px) {
-    .splash {
-        flex: 75vw 0 0;
-        display: flex;
-    }
 
-    .landing {
-        flex: 75vw 0 0;
-        justify-content: flex-start;
-        .landing__content{
-            width: 90%;
-        }
-    }
-
-    .showcase {
-        flex: 100vw;
-    }
-
-    .scrollable {
-        height: 100vh !important;
-        overflow-y: scroll;
-    }
 }
