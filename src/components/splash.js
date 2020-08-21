@@ -2,7 +2,7 @@
 
 import React from "react";
 import Arrow from "../components/arrow";
-import Icon from "../components/icon";
+import Blob from "../components/blob";
 import { StaticQuery, graphql } from "gatsby";
 
 const TemplateWrapper = () => {
@@ -18,8 +18,8 @@ const TemplateWrapper = () => {
             render={data => (
                 <div className="splash">
                         <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
-                        <div className="splash__icon">
-                          <Icon></Icon>
+                        <div className="splash__blob">
+                          <Blob></Blob>
                         </div>
                         <div className="point">
                       <Arrow></Arrow>

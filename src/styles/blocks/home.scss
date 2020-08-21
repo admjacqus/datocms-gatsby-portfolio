@@ -70,7 +70,7 @@
         margin-right: 25%;
     }
 
-    .splash__icon {
+    .splash__blob {
         display: none;
     }
 }
@@ -88,14 +88,11 @@
         justify-content: center;
     }
 
-    .splash__icon {
+    .splash__blob {
         position: absolute;
         top: 20%;
         right: 5%;
         z-index: -1;
-        .blob path {
-            fill: #F1D8C5!important;
-        }
        
     }
 }
