@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/
 
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
-import { StaticQuery, graphql } from "gatsby";
-import { HelmetDatoCms } from "gatsby-source-datocms";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
-import "../styles/index.scss";
+import '../styles/index.scss'
 
 const TemplateWrapper = ({ children }) => {
   return (
@@ -52,27 +52,24 @@ const TemplateWrapper = ({ children }) => {
           <div className="container__body">
             <div className="container__mobile-header">
               <div className="mobile-header">
-                <div className="mobile-header__menu">
-                </div>
+                <div className="mobile-header__menu"></div>
                 <div className="mobile-header__logo">
                   <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
                 </div>
               </div>
             </div>
-         
+
             {children}
-          
           </div>
         </div>
- 
       )}
     />
-  );
-};
+  )
+}
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.object
-};
+  children: PropTypes.object,
+}
 
-export default TemplateWrapper;
+export default TemplateWrapper
 /* eslint-enable jsx-a11y/anchor-has-content, jsx-a11y/anchor-is-valid*/

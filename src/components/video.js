@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 const Video = ({
   videoSrcURL,
   videoTitle,
@@ -18,5 +18,5 @@ const Video = ({
       allowFullScreen
     ></iframe>
   </div>
-);
-export default Video;
+)
+export default Video

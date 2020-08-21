@@ -4,9 +4,9 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Img from 'gatsby-image'
 import Video from '../components/video'
 import { graphql } from 'gatsby'
-import { Link } from "gatsby";
-import Layout from "../components/layout"
-import Arrow from "../components/arrow";
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
+import Arrow from '../components/arrow'
 
 export default ({ data }) => (
   <Layout>
@@ -39,12 +39,11 @@ export default ({ data }) => (
             ))}
           </Slider>
         </div>
-        {
-          data.datoCmsWork.video !== null &&
+        {data.datoCmsWork.video !== null && (
           <div className="sheet__video">
             <Video
               videoSrcURL={
-                "https://player.vimeo.com/video/" +
+                'https://player.vimeo.com/video/' +
                 data.datoCmsWork.video.providerUid
               }
               videoTitle={data.datoCmsWork.video.title}
@@ -52,51 +51,45 @@ export default ({ data }) => (
               videoHeight={data.datoCmsWork.video.height}
             />
           </div>
-        }
+        )}
       </div>
     </article>
   </Layout>
-);
+)
 
 export const query = graphql`
-         query WorkQuery($slug: String!) {
-           datoCmsWork(slug: { eq: $slug }) {
-             seoMetaTags {
-               ...GatsbyDatoCmsSeoMetaTags
-             }
-             title
-             excerpt
-             gallery {
-               fluid(
-                 maxWidth: 200
-                 imgixParams: { fm: "jpg", auto: "compress" }
-               ) {
-                 src
-               }
-             }
-             descriptionNode {
-               childMarkdownRemark {
-                 html
-               }
-             }
-             coverImage {
-               url
-               fluid(
-                 maxWidth: 600
-                 imgixParams: { fm: "jpg", auto: "compress" }
-               ) {
-                 ...GatsbyDatoCmsSizes
-               }
-             }
-             video {
-               url
-               title
-               provider
-               providerUid
-               thumbnailUrl
-               width
-               height
-             }
-           }
-         }
-       `;
+  query WorkQuery($slug: String!) {
+    datoCmsWork(slug: { eq: $slug }) {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      title
+      excerpt
+      gallery {
+        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
+          src
+        }
+      }
+      descriptionNode {
+        childMarkdownRemark {
+          html
+        }
+      }
+      coverImage {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
+      video {
+        url
+        title
+        provider
+        providerUid
+        thumbnailUrl
+        width
+        height
+      }
+    }
+  }
+`
