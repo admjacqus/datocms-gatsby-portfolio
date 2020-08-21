@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Sora:wght@477&display=swap");
+@import url("https://use.typekit.net/bkf1eke.css");
 
 @import "./modularscale/modularscale";
 
@@ -7,7 +7,7 @@ $modularscale: (base: 12px, ratio: 1.141, 768px: (ratio: 1.4), 1200px: (ratio: 1
 
 body {
     // font-size: 1em;
-    font-family: Roboto, sans-serif;
+    font-family: Gopher, sans-serif;
     color: #323232;
     font-weight: 400;
     font-style: normal;
@@ -25,35 +25,29 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: Sora, sans-serif;
+    font-weight: 400;
     margin-bottom: 0.5em;
     cursor: default;
-    font-variation-settings: 'wght' 300, 'wdth' 85;
-    transition: all ease-in-out;
-
-    @media (min-width: 900px) {
-        font-variation-settings: 'wght' 600, 'wdth' 100;
-    }
 }
 
 .xxl {
+    font-weight: 600;
     font-size: ms(6);
     @include ms-respond(font-size, 5);
-    font-variation-settings: 'wght' 600, 'wdth' 100;
-
-    @media (min-width: 1024px){
+    @media (min-width: 1024px) {
         @include ms-respond(font-size, 6);
     }
-    
 }
 
 h1 {
     font-size: ms(5);
+
     @include ms-respond(font-size, 5);
 }
 
 h2 {
     font-size: ms(3);
+
     @include ms-respond(font-size, 3);
 }
 
