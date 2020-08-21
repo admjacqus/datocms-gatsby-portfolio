@@ -62,7 +62,7 @@
         scroll-snap-type: y proximity;
 
         > * {
-            padding: 1em;
+            padding: 3em 1em;
         }
     }
 
@@ -90,7 +90,12 @@
 
     .splash__icon {
         position: absolute;
-        top: 50%;
+        top: 20%;
         right: 5%;
+        z-index: -1;
+        .blob path {
+            fill: #F1D8C5!important;
+        }
+       
     }
 }
