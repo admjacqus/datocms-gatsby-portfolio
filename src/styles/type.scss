@@ -8,7 +8,7 @@ $modularscale: (base: 12px, ratio: 1.141, 768px: (ratio: 1.4), 1200px: (ratio: 1
 body {
     // font-size: 1em;
     font-family: Gopher, sans-serif;
-    color: #323232;
+    color: $dark-font-color;
     font-weight: 400;
     font-style: normal;
 }
@@ -33,7 +33,9 @@ h5 {
 .xxl {
     font-weight: 600;
     font-size: ms(6);
+
     @include ms-respond(font-size, 5);
+
     @media (min-width: 1024px) {
         @include ms-respond(font-size, 6);
     }
