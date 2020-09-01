@@ -2,11 +2,15 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql, Link } from 'gatsby'
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import '../styles/index.scss'
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]');
+}
 
 const TemplateWrapper = ({ children }) => {
   return (
@@ -42,7 +46,7 @@ const TemplateWrapper = ({ children }) => {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div className="container">
           <HelmetDatoCms
             favicon={data.datoCmsSite.faviconMetaTags}
@@ -58,13 +62,12 @@ const TemplateWrapper = ({ children }) => {
                 </div>
               </div>
             </div>
-
             {children}
           </div>
         </div>
       )}
     />
-  )
+  );
 }
 
 TemplateWrapper.propTypes = {
