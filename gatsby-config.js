@@ -9,12 +9,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-anchor-links`,
-      options: {
-        offset: 0
-      }
-    },
-    {
       resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_API_TOKEN
