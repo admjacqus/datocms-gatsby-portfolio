@@ -3,6 +3,7 @@
 import React from 'react'
 import Arrow from '../components/arrow'
 import Icon from '../components/icon'
+import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { StaticQuery, graphql } from 'gatsby'
 
 const TemplateWrapper = () => {
@@ -22,7 +23,9 @@ const TemplateWrapper = () => {
             <Icon></Icon>
           </div>
           <div className="point">
-            <Arrow></Arrow>
+            <AnchorLink to="#landing" title="Our team">
+               <Arrow></Arrow>
+            </AnchorLink>
           </div>
           <div className="splash__copyright">{data.datoCmsHome.copyright}</div>
         </div>
