@@ -20,7 +20,7 @@ const TemplateWrapper = () => {
         }
       `}
       render={data => (
-        <div className="landing">
+        <div className="landing" id="landing">
           <div className="landing__content">
             <div
               className="landing_about"
