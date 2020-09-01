@@ -1,10 +1,6 @@
-.scrollSnap {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
-
+.container__body {
     > * {
-        scroll-snap-align: start;
+        padding: 3em;
         box-sizing: border-box;
     }
 }
@@ -57,12 +53,10 @@
 }
 
 @media screen and (max-width: 899px) {
-    .scrollSnap {
-        scroll-snap-type: y proximity;
-
+    .container__body {
         > * {
-            padding: 3em 1em;
-        }
+      padding: 3em 1em;
+    }
     }
 
     .splash__copyright {
@@ -75,7 +69,7 @@
 }
 
 @media screen and (min-width: 900px) {
-    .scrollSnap {
+    .container__body {
         scroll-snap-type: y mandatory;
 
         > * {
