@@ -8,7 +8,6 @@ import Landing from '../components/landing'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <div className="scrollSnap">
       <Splash></Splash>
       <Landing></Landing>
       <Masonry className="showcase">
@@ -30,7 +29,6 @@ const IndexPage = ({ data }) => (
           </div>
         ))}
       </Masonry>
-    </div>
   </Layout>
 )
 
