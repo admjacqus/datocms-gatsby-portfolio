@@ -6,8 +6,8 @@
 }
 
 .splash {
+    max-height: 100vh;
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -59,13 +59,14 @@
     }
     }
 
+    // .splash {
+    //     min-height: 150vw;
+    // }
+
     .splash__copyright {
         margin-right: 25%;
     }
 
-    .splash__blob {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 900px) {
@@ -78,14 +79,7 @@
     }
 
     .splash {
+        height: 100vh;
         justify-content: center;
-    }
-
-    .splash__blob {
-        position: absolute;
-        top: 20%;
-        right: 5%;
-        z-index: -1;
-       
     }
 }
