@@ -1,8 +1,6 @@
-.container__body {
-    > * {
-        padding: 3em;
-        box-sizing: border-box;
-    }
+.splash, .landing {
+    padding: 3em;
+    box-sizing: border-box;
 }
 
 .splash {
@@ -53,11 +51,9 @@
 }
 
 @media screen and (max-width: 899px) {
-    .container__body {
-        > * {
-      padding: 3em 1em;
-    }
-    }
+    .splash, .landing {
+            padding: 3em 1em;
+        }
 
     .splash {
         min-height: 150vw;
@@ -66,18 +62,9 @@
     .splash__copyright {
         margin-right: 25%;
     }
-
 }
 
 @media screen and (min-width: 900px) {
-    .container__body {
-        scroll-snap-type: y mandatory;
-
-        > * {
-            padding: 3em;
-        }
-    }
-
     .splash {
         height: 100vh;
         justify-content: center;
