@@ -1,6 +1,6 @@
-// .card {
-    // box-shadow: 0 0 5px #ccc;
-// }
+.card {
+    box-shadow: 0 0 5px #ccc;
+}
 
 .card__image {
     display: block;
@@ -63,10 +63,10 @@
         text-decoration: none;
         font-weight: bold;
         font-size: 16px;
-        color: $dark-body-color;
+        color: $light-font-color;
 
         &:hover {
-            border-bottom: dotted 1px #9055a2;
+            border-bottom: 3px solid $active-color;
         }
     }
 }
@@ -74,6 +74,7 @@
 .card__description {
     color: $light-body-color;
     line-height: 1.4;
+
     p {
         font-size: 14px;
     }

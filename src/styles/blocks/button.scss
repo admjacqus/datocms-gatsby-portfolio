@@ -1,14 +1,14 @@
 h1 a, h2 a, h3 a, h4 a, h5 a, p a {
-        display: inline-block;
-        background: $light-button-bg;
-        color: $dark-font-color;
-        padding: .75em 2em;
-        margin-top: 1em;
-
-        transition: 200ms ease all;
+    font-weight: bold;
+    display: inline-block;
+    background: $light-bg-color;
+    color: $light-font-color;
+    padding: .75em 2em;
+    margin-top: 1em;
+    transition: 200ms ease all;
 
     &:hover {
-        background: $dark-font-color;;
-        color: white;
+        background: $active-color;
+        color: $dark-font-color;
     }
 }
