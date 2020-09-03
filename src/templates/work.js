@@ -12,7 +12,7 @@ export default ({ data }) => (
   <Layout>
     <article className="sheet">
       <div className="backArrow">
-              <Link to="/">
+              <Link to="/#showcase">
         <Arrow></Arrow>
       </Link>
       </div>
