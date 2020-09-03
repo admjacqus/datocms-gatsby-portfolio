@@ -2,9 +2,12 @@
   visibility: hidden;
 }
 
+.showcase {
+  padding-top: 1em;
+}
+
 .showcase__item {
   margin-bottom: 30px;
-  // flex-shrink: 1;
 }
 
 @media screen and (max-width: 400px) {

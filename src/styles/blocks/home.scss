@@ -1,8 +1,6 @@
-.container__body {
-    > * {
-        padding: 3em;
-        box-sizing: border-box;
-    }
+.splash, .landing {
+    padding: 3em;
+    box-sizing: border-box;
 }
 
 .splash {
@@ -34,13 +32,13 @@
 }
 
 .splash__copyright {
-    color: $dark-font-color;
+    color: $light-font-color;
     font-size: 13px;
 }
 
 .landing {
-    background-color: $light-bg-color;
-    color: $light-font-color;
+    background-color: $dark-bg-color;
+    color: $dark-font-color;
 }
 
 .landing__content {
@@ -53,29 +51,22 @@
 }
 
 @media screen and (max-width: 899px) {
-    .container__body {
-        > * {
-      padding: 3em 1em;
-    }
+    .splash, .landing {
+        padding: 3em 1em;
     }
 
-    // .splash {
-    //     min-height: 150vw;
-    // }
+    .splash {
+        min-height: 150vw;
+    }
 
     .splash__copyright {
         margin-right: 25%;
     }
-
 }
 
 @media screen and (min-width: 900px) {
-    .container__body {
-        scroll-snap-type: y mandatory;
-
-        > * {
-            padding: 3em;
-        }
+    .splash, .landing {
+        padding: 5em;
     }
 
     .splash {

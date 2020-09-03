@@ -15,8 +15,10 @@
     font-size: 30px;
     margin-bottom: 30px;
     font-weight: bold;
-    color: $dark-font-color;
+    color: $light-font-color;
     line-height: 1;
+    border-bottom: 3px solid $active-color;
+    display: inline-block;
 }
 
 .sheet__lead {
