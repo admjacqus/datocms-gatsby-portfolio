@@ -2,10 +2,9 @@
     padding: 40px 20px;
 }
 
-.sheet__inner {
-    max-width: 600px;
-
-    @media (min-width: 1200px) {
+@media (min-width: 1200px) {
+    .sheet__inner {
+        display: block;
         max-width: 960px;
         margin: 0 auto;
     }
@@ -17,8 +16,8 @@
     font-weight: bold;
     color: $light-font-color;
     line-height: 1;
-    border-bottom: 3px solid $active-color;
-    display: inline-block;
+    text-decoration: underline;
+    text-decoration-color: $active-color;
 }
 
 .sheet__lead {
@@ -27,12 +26,13 @@
 }
 
 .sheet__gallery,
-.sheet__slider {
+.sheet__slider,
+.sheet__video {
     margin-bottom: 30px;
 }
 
 .sheet__body {
-    color: $dark-font-color;
+    color: $light-font-color;
     font-size: 14px;
     margin-bottom: 30px;
 
@@ -47,7 +47,7 @@
     h1, h2, h3, h4, h5, h6 {
         font-weight: bold;
         margin-top: 40px;
-        color: $dark-font-color;
+        color: $light-font-color;
     }
 
     h1 {
@@ -81,11 +81,9 @@
         padding: 20px;
     }
 }
+
 .backArrow {
     margin-bottom: 2em;
-}
-iframe {
-    width: 100%;
 }
 
 @media screen and (min-width: 900px) {

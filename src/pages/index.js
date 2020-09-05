@@ -10,7 +10,7 @@ const IndexPage = ({ data }) => (
   <Layout>
       <Splash></Splash>
       <Landing></Landing>
-      <Masonry className="showcase">
+      <Masonry className="showcase" id="showcase">
         {data.allDatoCmsWork.edges.map(({ node: work }) => (
           <div key={work.id} className="showcase__item">
             <figure className="card">

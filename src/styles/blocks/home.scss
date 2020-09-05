@@ -4,6 +4,7 @@
 }
 
 .splash {
+    min-height: 50vh;
     max-height: 100vh;
     position: relative;
     display: flex;
@@ -43,8 +44,7 @@
 
 .landing__content {
     max-width: 960px;
-    align-self: center;
-
+margin-right: 2em;
     p {
         margin-bottom: 1em;
     }
@@ -53,10 +53,6 @@
 @media screen and (max-width: 899px) {
     .splash, .landing {
         padding: 3em 1em;
-    }
-
-    .splash {
-        min-height: 150vw;
     }
 
     .splash__copyright {
