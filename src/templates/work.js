@@ -48,7 +48,7 @@ export default ({ data }) => (
           }}
         />
         <div className="sheet__slider">
-          <Slider infinite={true} slidesToShow={2} arrows>
+          <Slider infinite={true} slidesToShow={1} arrows>
             {data.datoCmsWork.gallery.map(({ fluid }) => (
               <img
                 alt={data.datoCmsWork.title}
