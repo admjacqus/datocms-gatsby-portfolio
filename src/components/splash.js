@@ -17,7 +17,7 @@ const TemplateWrapper = () => {
       render={(data) => (
         <div className="splash">
           <h1 className="xxl">Hi, I'm Adam Jacques.</h1>
-            <Link to="/#landing" title="Our team" className="point">
+            <Link to="/#landing" title="To showcase..." className="point">
               <Arrow></Arrow>
             </Link>
           <div className="splash__copyright">{data.datoCmsHome.copyright}</div>
