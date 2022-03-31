@@ -12,6 +12,7 @@
     justify-content: space-between;
 }
 
+
 .point {
     position: absolute;
     bottom: 3em;
@@ -57,11 +58,19 @@
     }
 }
 
+
 @media screen and (max-width: 899px) {
+
     .splash, .landing {
         padding: 3em 2em;
     }
-
+    .splash {
+        max-width: 100vw;
+        min-height: 100vw;
+    }
+    .landing {
+        padding-right: 4em;
+    }
 
     .splash__copyright {
         margin-right: 25%;
