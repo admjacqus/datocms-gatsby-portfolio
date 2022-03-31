@@ -14,12 +14,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a {
 }
 
 p a {
-    font-style: italic;
+    // font-style: italic;
     text-decoration: underline;
     text-decoration-color: $active-color;
     transition: 200ms ease all;
-    color: $light-font-color;
-    font-weight: bold;
+    color: inherit;
+
+    // color: $light-font-color;
+    // font-weight: bold;
     transition: 200ms ease color;
 
     &:hover {
