@@ -38,12 +38,19 @@
 }
 
 .landing {
-    background-color: $dark-bg-color;
+    // background-color: $dark-bg-color;
+    background: $dark-bg-color;  /* fallback for old browsers */
+
     color: $dark-font-color;
+    text-align: justify;
+
+	background: linear-gradient(-25deg, $dark-bg-color, darken($dark-bg-color, 5%), lighten($dark-bg-color, 5%));
+
 }
 
+
 .landing__content {
-    max-width: 960px;
+    max-width: 860px;
     margin: 2em auto;
     p {
         margin-bottom: 1em;
@@ -54,6 +61,7 @@
     .splash, .landing {
         padding: 3em 2em;
     }
+
 
     .splash__copyright {
         margin-right: 25%;

@@ -12,7 +12,7 @@ const Arrow = () => (
       <g
         id="Pixel-Slate-Copy-3"
         transform="translate(-109.000000, -1487.000000)"
-        stroke="#161418"
+        stroke="#D74F3D"
         stroke-width="2"
       >
         <g id="back-arrow" transform="translate(110.000000, 1487.000000)">
